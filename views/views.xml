@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="myicecat.list">
+      <field name="name">myicecat list</field>
+      <field name="model">myicecat.myicecat</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="myicecat.action_window">
+      <field name="name">myicecat window</field>
+      <field name="res_model">myicecat.myicecat</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="myicecat.action_server">
+      <field name="name">myicecat server</field>
+      <field name="model_id" ref="model_myicecat_myicecat"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="myicecat" id="myicecat.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="myicecat.menu_1" parent="myicecat.menu_root"/>
+    <menuitem name="Menu 2" id="myicecat.menu_2" parent="myicecat.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="myicecat.menu_1_list" parent="myicecat.menu_1"
+              action="myicecat.action_window"/>
+    <menuitem name="Server to list" id="myicecat" parent="myicecat.menu_2"
+              action="myicecat.action_server"/>
+-->
+  </data>
+</odoo>
